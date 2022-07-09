@@ -1,0 +1,30 @@
+.navbarWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 27px;
+  border-bottom: 1px solid white;
+  font-family: 'BebasNeue-Regular';
+}
+
+.imageWrap {
+  display: block;
+  height: 30px;
+  width: 70px;
+}
+
+.linkWrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .linkWrap {
+    display: none;
+  }
+}

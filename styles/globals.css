@@ -2,8 +2,24 @@ html,
 body {
   padding: 0;
   margin: 0;
+  min-height: 100vh;
+
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+  background-color: #000000;
+  color: var(--font-color);
+}
+
+:root {
+  --background: #000000;
+  --success: #dff2bf;
+  --error: #ffd2d2;
+  --font-color: #cacaca;
+  --dark-accent: #222222;
+  --success-text: #4f8a10;
+  --error-text: #d8000c;
+  --rbg-green: #2ed822;
 }
 
 a {
@@ -13,4 +29,41 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('../public/fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Teko-Light';
+  src: url('../public/fonts/Teko-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../public/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoMono-Regular';
+  src: url('../public/fonts/RobotoMono-Regular.ttf');
+}
+
+.react-icons {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-family: 'BebasNeue-Regular';
+}
+
+p {
+  font-family: 'Teko-Light';
 }

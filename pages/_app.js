@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import HeadTags from '../components/app/Head';
+import Layout from '../components/app/Layout';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <HeadTags />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
-
-export default MyApp
