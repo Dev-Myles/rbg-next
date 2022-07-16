@@ -1,9 +1,14 @@
 import FadeWrap from '../../template/FadeWrap';
+import Gallery from './Gallery';
+import PastProjects from './PastProjects';
+import Services from './Services';
 
 export default function Products() {
   return (
     <FadeWrap>
-      <h1>Products</h1>
+      <Services />
+      <Gallery />
+      <PastProjects />
     </FadeWrap>
   );
 }
