@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+<h1 align=center style=bold> Rock Bottom Guild </h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+www.rockbottomguild.com is a custom website built for an Iowa based custom metal fabricator. The site is simple static site used to advertise the fabricators services/products and allows for customers to fill out a message form in order to get in contact. It has been deployed through Heroku and is ssl certified through cloudflare.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![header](https://user-images.githubusercontent.com/87087229/161316974-6f1eb920-076e-4e8e-80a3-92ec40478a9c.PNG)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<br>
+<br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h1 style=bold id="future-updates">Future Updates</h1>
+Future updates regarding layout and style will be done on client request. Security, errors, and maintenance will be done upon discovery or reports.
 
-## Learn More
+<br>
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+<h1 style="bold" id="contributors"> Contributors</h1>
+<hr>
+Myles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##### email: dev_myles@icloud.com
+##### github: Dev-Myles
+<hr>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
