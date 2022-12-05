@@ -1,134 +1,46 @@
 .form {
   display: flex;
-  width: fit-content;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+
   margin: 0 auto;
   margin-bottom: 4rem;
   margin-top: 3rem;
   color: var(--fontColor);
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.formBodyWrap {
+.form > label {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.formBodyWrap div {
-  margin: 10px;
-}
-
-.howToUsePara {
-  width: 48ch;
-  font-size: 35px;
-  font-family: 'Teko-light';
-}
-
-.formBodyWrap h2 {
-  font-family: 'BebasNeue-Regular';
-  margin-bottom: 0;
-}
-
-.formBodyWrap hr {
-  width: 100%;
-  color: white;
+  flex-direction: column;
+  color: var(--fontColor);
+  width: 90vw;
+  font-weight: bold;
+  max-width: 600px;
+  font-size: large;
   margin-bottom: 1rem;
 }
 
-.form label {
-  font-size: 25px;
-  font-family: 'BebasNeue-Regular';
-}
-
-.form input,
-.messageInput,
-.errorMessage {
-  font-size: 22px;
-}
-
-.form input:focus,
-.messageInput:focus {
-  outline: 1px solid green;
-}
-
-.textInput,
-.emailInput,
-.messageInput,
-.errorMessage {
-  width: 33vw;
-}
-
-.messageInput {
-  resize: none;
-  overflow-y: scroll;
-  height: 30vh;
-}
-
-.inputWrap {
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
+.form > label > input {
+  color: black;
+  padding: 3px;
 }
 
 .button {
-  background-color: black;
   border: 1px solid white;
-  color: var(--fontColor);
-  padding: 10px;
-  border-radius: 7px;
-  transition: ease-in-out 0.3s;
-  font-family: 'BebasNeue-Regular';
-  margin: 0 auto;
+  width: fit-content;
+  margin: auto;
+  padding: 2px 10px 2px 10px;
+  margin-top: 2rem;
+  border-radius: 100000px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.messageInput {
+  color: black;
+  height: 20vh;
 }
 
 .button:hover {
   cursor: pointer;
-  transform: scale(1.1);
-  box-shadow: 0 0 7px white;
-}
-
-.errorMessage {
-  color: #d0342c;
-}
-
-.imageWrap {
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.formHelpWrap {
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (max-width: 999px) {
-  .form {
-    width: 100%;
-    height: fit-content;
-    border: none;
-  }
-
-  .formBodyWrap {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .textInput,
-  .emailInput,
-  .messageInput,
-  .errorMessage {
-    width: 100%;
-  }
-
-  .howToUsePara {
-    width: 32ch;
-    font-size: 30px;
-    font-family: 'Teko-light';
-  }
 }

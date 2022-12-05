@@ -17,7 +17,7 @@ export default async function sendMessage(req, res) {
     // send mail with defined transport object
     await transporter.sendMail({
       from: `${email}`, // sender address
-      to: 'rockbottomguild@yahoo.com', // list of receivers
+      to: 'rockbottomguild@yahoo.com',
       subject: `${subject}`, // Subject line
       text: `${firstname}, ${lastname} \n
       ${email} \n

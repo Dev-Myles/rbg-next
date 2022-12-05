@@ -45,7 +45,7 @@ export default function NavMenu() {
           Contact
         </div>
       </div>
-      <div className={styles.channels}>{channels[isChannel]}</div>
+      {channels[isChannel]}
     </div>
   );
 }

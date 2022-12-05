@@ -10,15 +10,10 @@
 }
 
 .navigation {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   width: 80%;
-}
-
-.channels {
-  max-width: 92%;
 }
 
 @media only screen and (max-width: 1000px) {
