@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Iowa from '../../public/images/Iowa.svg';
+import Iowa from '../../public/images/iowa.svg';
 
 export default function About() {
   return (
