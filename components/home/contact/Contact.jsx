@@ -1,6 +1,4 @@
-import FadeWrap from '../../template/FadeWrap';
-import styles from './contact.module.css';
-
+import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import FlashMessage from '../flash/FlashMessage';
@@ -9,7 +7,7 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const [isSubmited, setSubmit] = useState();
@@ -44,10 +42,17 @@ export default function Contact() {
   };
 
   return (
-    <FadeWrap>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <h2>Contact Form</h2>
-        <hr />
+    <>
+      <form
+        className="[&>label]:max-w-prose [&>label]:mx-auto [&>label>*]:p-1 p-2 border-t-[1px] [&>label>*]:max-w-prose border-white [&>label]:my-[2px]  py-5 [&>label]:flex [&>label]:flex-col text-black "
+        onSubmit={handleSubmit(onSubmit)}
+        id="form"
+      >
+        <h2 className="text-3xl md:text-5xl mt-5 text-white font-bas md:text-center">
+          Contact Us Below
+        </h2>
+        <h6 className="text-white md:text-center">All fields are required</h6>
+
         {isSubmited == undefined ? null : (
           <FlashMessage
             status={isSubmited.status}
@@ -56,89 +61,73 @@ export default function Contact() {
           />
         )}
 
-        <label htmlFor="firstname">
-          First name
+        <label htmlFor="name">
+          Name
           <input
-            name="firstname"
-            className={styles.textInput}
+            name="name"
+            className=""
             type="text"
-            placeholder="First name"
-            {...register('firstname', {
+            placeholder="First Last"
+            {...register('name', {
               required: true,
-              pattern: /^[A-Za-z]+$/i,
-              maxLength: 22,
+              pattern: /^[a-zA-Z ]{2,32}$/i,
+              maxLength: 32,
+              minLength: 2,
             })}
           />
-          {errors.name && <span>Please enter a valid first name</span>}
+          {errors.name && (
+            <span className="text-red-500">Please enter a valid Name</span>
+          )}
         </label>
 
-        <label htmlFor="lastname">
-          Last name
-          <input
-            name="lastname"
-            className={styles.textInput}
-            type="text"
-            placeholder="Last name"
-            {...register('lastname', {
-              required: true,
-              pattern: /^[A-Za-z]+$/i,
-              maxLength: 22,
-            })}
-          />
-          {errors.lastname && <span>Please enter a valid last name</span>}
-        </label>
         <label htmlFor="email">
           Email
           <input
             name="email"
-            className={styles.emailInput}
+            className=""
             type="email"
             placeholder="Email@email.com"
             {...register('email', {
               maxLength: 30,
+              minLength: 6,
               required: true,
               pattern:
-                /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/,
+                /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/i,
             })}
           />
           {errors.email && (
-            <span className={styles.errorMessage}>
-              Please enter a valid email
-            </span>
+            <span className="text-red-500">Please enter a valid Email</span>
           )}
-        </label>
-        <label htmlFor="subject">
-          Subject
-          <input
-            name="subject"
-            className={styles.textInput}
-            type="text"
-            placeholder="custom product, bug, etc..."
-            {...register('subject', {
-              required: true,
-              pattern: /^[A-Za-z]+$/i,
-              maxLength: 22,
-            })}
-          />
-          {errors.subject && <span>Please enter a valid subject</span>}
         </label>
 
         <label htmlFor="message">
           Message
           <textarea
             name="message"
-            className={styles.messageInput}
+            className="h-72"
             type="text"
-            {...register('message', { required: true, maxLength: 1000 })}
+            {...register('message', {
+              required: true,
+              maxLength: 1000,
+              pattern: /^[A-Za-z0-9 _.,!"'/$]+$/i,
+            })}
           />
           {errors.message && (
-            <span className={styles.errorMessage}>
-              Please enter a valid message
-            </span>
+            <span className="text-red-500">Please enter a valid message.</span>
           )}
         </label>
-        <input className={styles.button} type="submit" value="Send Message" />
+        {isSubmitting ? (
+          <span className="text-green-500">Sending message...</span>
+        ) : null}
+        <input
+          className="text-xl font-bas bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 text-white block mx-auto rounded-full px-10 py-2 my-5"
+          type="submit"
+          value="Send Message"
+        />
       </form>
-    </FadeWrap>
+      <Link href="/policy" className="text-white text-center ">
+        <a className="font-bas text-2xl w-fit my-4 mx-auto block">Policy</a>
+      </Link>
+    </>
   );
 }

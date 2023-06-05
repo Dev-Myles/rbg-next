@@ -13,13 +13,18 @@ body {
   overflow-x: hidden;
   background-color: #000000;
   color: var(--font-color);
+  scroll-behavior: smooth;
+}
+
+label {
+  color: white;
 }
 
 :root {
   --background: #000000;
   --success: #dff2bf;
   --error: #ffd2d2;
-  --font-color: #cacaca;
+  --font-color: #ffffff;
   --dark-accent: #222222;
   --success-text: #4f8a10;
   --error-text: #d8000c;
@@ -41,18 +46,8 @@ a {
 }
 
 @font-face {
-  font-family: 'Teko-Light';
-  src: url('../public/fonts/Teko-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Lato-Regular';
-  src: url('../public/fonts/Lato-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'RobotoMono-Regular';
-  src: url('../public/fonts/RobotoMono-Regular.ttf');
+  font-family: 'Questrial-Regular';
+  src: url('../public/fonts/Questrial-Regular.ttf');
 }
 
 .react-icons {
@@ -63,11 +58,19 @@ li {
   list-style: none;
 }
 
+input,
+textarea {
+  color: #000000;
+}
+
 h1,
-h2 {
+h2 h3,
+h4,
+h5 {
+  color: white;
   font-family: 'BebasNeue-Regular';
 }
 
 p {
-  font-family: 'Teko-Light';
+  font-family: 'Questrial-Regular';
 }
