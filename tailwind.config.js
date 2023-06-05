@@ -5,7 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quest: ['Questrial-Regular'],
+        bas: ['BebasNeue-Regular'],
+      },
+    },
   },
   plugins: [],
 };

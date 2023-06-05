@@ -1,7 +1,18 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Policy() {
   return (
-    <>
+    <div className="ml-5 mt-5">
       <>
+        <Link href="/">
+          <Image
+            src="/images/RBG-logo.svg"
+            alt="RBG logo"
+            width={100}
+            height={50}
+          />
+        </Link>
         <h1>Private Policy</h1>
         <p>Last updated: February 14, 2022</p>
         <p>
@@ -578,6 +589,6 @@ export default function Policy() {
         using the details below: https://www.rockbottomguild.com/ This document
         was last updated on August 31, 2021
       </p>
-    </>
+    </div>
   );
 }

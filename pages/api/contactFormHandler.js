@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 // async..await is not allowed in global scope, must use a wrapper
 export default async function sendMessage(req, res) {
   try {
-    const { email, firstname, lastname, subject, message } = req.body;
+    const { email, firstname, lastname, message } = req.body;
 
     let transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -18,7 +18,7 @@ export default async function sendMessage(req, res) {
     await transporter.sendMail({
       from: `${email}`, // sender address
       to: 'rockbottomguild@yahoo.com',
-      subject: `${subject}`, // Subject line
+      subject: 'A new message from RockBottomGuild Website!', // Subject line
       text: `${firstname}, ${lastname} \n
       ${email} \n
       ${message} 
